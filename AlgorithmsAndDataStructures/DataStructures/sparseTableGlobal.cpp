@@ -13,7 +13,7 @@ int f(int a, int b){
 
 
 void fill_sparse_table(int N, const int *v){
-    const int LAST_LEVEL = 31 - __builtin_clz(N);
+    const int LAST_LEVEL = 31 - __builtin_clz(N) + 1;
     for (int i = 0; i < N; i++) M[i][0] = v[i];
     
     for (int k = 0; k < LAST_LEVEL; k++) {

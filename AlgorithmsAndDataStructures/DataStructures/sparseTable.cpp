@@ -21,7 +21,7 @@ int main(){
     const int N = 11;
 
     int **M = (int **) malloc(N*sizeof(int*));
-    const int LAST_LEVEL = 31 - __builtin_clz(N);
+    const int LAST_LEVEL = 31 - __builtin_clz(N) + 1;
     for(int i = 0; i < N; i++){
         M[i] = (int *) malloc(LAST_LEVEL*sizeof(int));
     }
